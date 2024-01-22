@@ -1,0 +1,36 @@
+body{
+    overflow: hidden;
+}
+
+
+.loader {
+    margin: auto;
+    border: 20px solid #f3f3f3;
+    border-top: 20px solid #3498db;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Character */
+
+  .character {
+    width: 64px;
+    height: 64px;
+    background-image: url('./img/ghost.png');
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    animation: walk 5s steps(100) infinite; 
+  }
+  
+  @keyframes walk {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(100vw - 64px)); }
+  }
